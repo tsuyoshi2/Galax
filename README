@@ -36,52 +36,6 @@ Here is a list of the main Galax features.
 * Galax supports the XQuery 1.0 Update Facility
 * Galax supports the XQueryP scripting extension for XQuery
 
-Alpha features:
-
-The following features are experimental.
-
-* Galax inludes support for SOAP and WSDL-based Web Services
-  invocation;
-* Galax inludes support for Distributed XQuery development;
-* Galax's compiler includes an optimizer that supports state of
-  the art database and programming language optimization, including:
-  * type-based optimizations, notably eliminating unnecessary type
-    matching or casting operations and turning dynamic dispatch into
-    static dispatch for comparison and arithmetic operators;
-  * tail-recursion optimization;
-  * join and query unnesting optimizations, including physical
-    support for XQuery-specific hash and sort join algorithms;
-  * tree-pattern detection in query plans and physical support for
-    the TwigJoin and StaircaseJoin algorithms;
-  * generation of hybrid streamed/materialized query plans.
-* Galax has an extensible data model interface. This allows
-  users to provide their own implementation of the XML data
-  model. This can be used to support e.g., XML queries over legacy
-  data.
-
-Changes since the last version
-
-The following lists the main changes included with this version.
-
-* Environment:
-  * Builds on OCaml 3.12, and recent libraries.
-  * Switched to XQuery test suite version 1.0.3.
-* Performance:
-  * Improvements to streaming namespace resolution.
-  * More aggressive rewrites of E1[E2] when E2 is a numeric value.
-* Bug fixes:
-  * Parsing:
-    * '\\013' characters now get properly normalized to new lines.
-    * processing instructions kind-test verifies it is a proper NCName.
-    * default axis for attribute() and schema-attribute() kind tests
-    is attribute.
-    * default typeswitch clause with a variable parses properly.
-  * Semantics:
-    * leading '/' checks for document node.
-    * following/preceding sibling axis on attribute nodes is empty.
-
-Detailed installation instructions are provided in INSTALL.
-
 How to use Galax
 
 The Galax processor offers the following user interfaces:
@@ -92,11 +46,9 @@ The Galax processor offers the following user interfaces:
 
 Using Galax from the command line
 
-A number of stand-alone command-line tools are provided with the Galax
-distribution. Assuming the Galax distribution is intalled in
-\verb+$GALAXHOME+, and that Galax executables are reachable from your
-\verb+$PATH+ environment variable, The following examples show how to
-use the main command-line tools.
+A number of stand-alone command-line tools are provided with the
+Galax distribution. The following examples show how to use the main
+command-line tools.
 
 * The main XQuery interpreter (glx xquery) is
   the simplest way to use Galax. For instance, the following commands:

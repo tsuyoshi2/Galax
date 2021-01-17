@@ -1,2 +1,0 @@
-# Starting point for documentation on using the Galax Configure script
-#
